@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL =  process.env.REACT_APP_API_URL;// Django backend
+const API_URL =   "https://career-path-ai-sc0h.onrender.com/api",
+ withCredentials: true, 
 
 // Axios instance with token support
 const api = axios.create({
