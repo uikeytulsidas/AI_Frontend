@@ -91,7 +91,7 @@ export const sendMessage = (data) => api.post("users/messages/", data);
 // Career Analyzer API
 export const analyzeCareer = async (resumeText) => {
   if (!resumeText) throw new Error("Resume text is empty");
-  const res = await axios.post("/career/analyzer/", {
+  const res = await axios.post("career/analyzer/", {
     resume_text: resumeText,
   }); // no token needed here unless you require auth
   return res.data;
