@@ -252,7 +252,7 @@ body {
 /* ===============================
    Responsive Adjustments
    =============================== */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .sidebar-open {
     width: 200px !important;
   }
@@ -282,5 +282,82 @@ body {
   .chat-send-btn {
     font-size: 13px;
     padding: 8px 12px;
+  }
+}
+ */
+
+
+/* ===============================
+   Enhanced Mobile Responsiveness
+   =============================== */
+@media (max-width: 992px) {
+  /* Sidebar collapses into overlay */
+  .sidebar-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px !important;
+    z-index: 1050;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  }
+  .sidebar-closed {
+    display: none !important;
+  }
+
+  /* Main content takes full width */
+  .main-content {
+    width: 100% !important;
+  }
+
+  /* Add hamburger menu for sidebar */
+  .hamburger-btn {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Chat section padding smaller */
+  .chat-section {
+    padding: 6px;
+  }
+
+  /* Input box stacked */
+  .chat-input-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .chat-input {
+    width: 100%;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .chat-send-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Text smaller on very small phones */
+  .chat-input {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .chat-send-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .topbar .btn {
+    font-size: 12px;
+    padding: 6px 10px;
   }
 }
