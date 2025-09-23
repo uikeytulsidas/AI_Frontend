@@ -232,7 +232,7 @@ const handleSubmit = async (e) => {
           {messages.length === 0 && (
             <div className="text-center text-muted mt-5">
               <h4>Welcome to Career Path Analyzer 🚀</h4>
-              <p>Paste your resume text or skills below and start chatting.</p>
+              <p>Paste your resume Skill text only and  Check Career Recommendations.</p>
             </div>
           )}
 
@@ -348,7 +348,7 @@ const handleSubmit = async (e) => {
           <textarea
             className="form-control me-2 rounded-3 shadow-sm"
             rows="2"
-            placeholder="Paste your resume text or skills here..."
+            placeholder="Paste your resume Skill text only  or skills here..."
             value={resumeText}
             onChange={(e) => setResumeText(e.target.value)}
           />
